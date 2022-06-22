@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+<!doctype html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="post-item">
+        <form class="post-item-wrap" asp-action="GetOrders" asp-controller="Home" method="post">
+            <div class="select"><select  name="str" asp-items="@ViewBag.SelectItems"></select>
+            <input type="submit" /></div>
+        </form>
+    </div>
+    Все заказы:
+    <div class="post-wrap">
+
+        @foreach (var item in Model)
+        {
+            <div class="post-item">
+                <div class="post-item-wrap">
+                    <a href="" class="post-link">
+                        <h3 class="post-title">Ваш Id: @item.Id<br /></h3>
+                        <p class="post-content">
+                            Дата оформления заказа: @item.Date <br />
+                            Код заказа:@item.NumberForOrder<br />
+                            Ваше имя: @item.NameOfTheClient<br />
+                            Сумарная стоимость: @item.Amount грн<br />
+                            <div style="text-decoration:underline">Позиции заказа:</div>
+                            @foreach (var OrderPosition in item.Positions)
+                            {
+                                <div>
+                                    Id позиции заказа: @OrderPosition.Id<br />
+                                    Имя позиции заказа: @OrderPosition.Name <br />
+                                    Стоимость позиции заказа: @OrderPosition.Price <br />
+                                </div>
+                            }
+                            </p>
+</a>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; 
+}
+.border-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 30px;
+    margin: 10px 20px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: none;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+    .button:before, button:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        box-sizing: border-box;
+    }
+
+    .button:before {
+        bottom: 0;
+        left: 0;
+        border-left: 1px solid white;
+        border-top: 1px solid white;
+        transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+    }
+
+   .button:after {
+        top: 0;
+        right: 0;
+        border-right: 1px solid white;
+        border-bottom: 1px solid white;
+        transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
+    }
+
+    .button:hover:before,
+    .button:hover:after {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .button:hover:before {
+        transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+    }
+
+    .button:hover:after {
+        transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
+    }
+
+    .button:hover {
+        background: rgba(255, 255, 255, .2);

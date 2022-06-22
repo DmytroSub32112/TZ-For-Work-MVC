@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "AddPosition";
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div>
+        <h3>Добавить позиции к вашему заказу:</h3>
+        <div>
+            <form method="post" action="~/Home/AddPosition">
+                <label>Ведите Id  заказа:</label></br>
+                <input type="number" name="Id"></br>
+
+                <label>Введите имя позиции заказа:</label></br>
+                <input type="text" name="name"></br>
+
+                <label>Введите Цену позиции заказа:</label></br>
+                <input type="number" name="price"></br>
+
+                <label>Введите количество позиции заказа:</label></br>
+                <input type="number" name="quantity"></br>
+
+                <input type="submit" value="Add">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+

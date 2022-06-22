@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div>
+        <h3>Изменить заказ:</h3>
+        <div>
+            <form method="post" action="~/Home/UpdateOrders">
+                <label>Введите Id заказа который хотите изменить:</label></br>
+                <input type="number" name="Id"></br>
+                <label>Введите имя новой позиции товара:</label></br>
+                <input type="text" name="positionName"></br>
+                <label>Введите новую стоимость позиции товара:</label></br>
+                <input type="number" name="price"></br>
+                <label>Введите количество позиции товара:</label></br>
+                <input type="number" name="quantity"></br>
+                <input type="submit" value="Update">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
